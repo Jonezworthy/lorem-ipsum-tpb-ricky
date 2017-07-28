@@ -6,8 +6,7 @@ module.exports = class controllerRoutes {
         express.all('/api/:endpoint/:params', oApiHandler.dynController);
         
         express.get('*', function (req, res) {
-            console.log('bad');
             res.status(404).send(JSON.stringify({status: 'error', error: '404 Not found'}));
         });
     }
-}
+};

@@ -9,7 +9,7 @@ module.exports = class controllerQuote {
         let aIpsum = [];
         this.oModel.selectQuotes(actor).then((aQuotes) => {
             shuffle(aQuotes);
-            paragraphs = parseInt(paragraphs) <= 50 ? parseInt(paragraphs) : 50;
+            paragraphs = parseInt(paragraphs) <= 40 ? parseInt(paragraphs) : 40;
             linesPerParagraph = parseInt(linesPerParagraph) <= 10 ? parseInt(linesPerParagraph) : 10;
 
             let paragraphsDone = 0;

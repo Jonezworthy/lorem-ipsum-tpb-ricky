@@ -34,7 +34,7 @@ MongoClient.connect("mongodb://localhost:27017/tpb", function (err, db) {
                     let quote = fullquote.replace(actor + ':', '').replace(new RegExp('"', 'g'), '').replace(/\(([a-z \!\?]+)\)/gi, '').trim();
                     let dateCreated = new Date();
 
-                    if (actor.indexOf('[') === -1 && actor.indexOf('(') === -1 && quote.length > 25 && quote.indexOf('[') === -1 && quote.indexOf('(') === -1) {
+                    if (quote.length > 30 && actor.indexOf('[') === -1 && actor.indexOf('(') === -1 && quote.indexOf('[') === -1 && quote.indexOf('(') === -1) {
                         console.log(position + ' | ' + actor + ':' + quote);
 
                         oQuotes.insert({
